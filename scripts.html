@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1070701020193235016/1074306204383322132/wumatpfp.png">
     <title>wumat's site</title>
     <style>
@@ -44,7 +47,7 @@
           transform: translate(-50%, -50%) translate(0, 50%) scale(1);
         }
       }
-      
+
       .button-container {
         display: flex;
         justify-content: center;
@@ -72,16 +75,46 @@
         transform: scale(0.9);
         box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
       }
+      code {
+      font-size: 20px;
+      font-family: 'Comic Sans MS', sans-serif;
+      display: block;
+      background-color: #F1F1F1;
+      padding: 10px;
+      border-radius: 30px;
+      text-align: center;
+    }
+
 
 
     </style>
+
+    
+
+        <script>
+    function copyCode() {
+      var codeBlock = document.getElementById("lua-code");
+      var range = document.createRange();
+      range.selectNode(codeBlock);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
+      alert("script has been copied to your clipboard!")
+    }
+    </script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
-    <h1>wumat.xyz</h1>
+    <h1>scripts</h1>
     <img src="https://media.discordapp.net/attachments/1070701020193235016/1074306204383322132/wumatpfp.png" class="center-image">
     <div class="button-container">
-      <button class="button" onclick="window.location.href='https://dsc.gg/wumat'">discord</button>
-      <button class="button" onclick="window.location.href='scripts.html'">scripts</button>
-    </div>
+        <pre><code class="language-lua" id="lua-code">
+loadstring(game:HttpGetAsync("https://wumat.xyz/scripts/wumatsvisualhub.lua", true))()
+            </code></pre>
+            <button class="button" button onclick="copyCode()">copy</button>
+      </div>
   </body>
 </html>
