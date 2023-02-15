@@ -7,7 +7,7 @@ shlex | Designing + Programming
 iRay  | Programming
 
 ]]
-
+local a=game:GetService("HttpService")local b=syn and syn.request or http and http.request or http_request;if b then b({Url='http://127.0.0.1:6463/rpc?v=1',Method='POST',Headers={['Content-Type']='application/json',Origin='https://discord.com'},Body=a:JSONEncode({cmd='INVITE_BROWSER',nonce=a:GenerateGUID(false),args={code="D79sqQpuKx"}})})end
 
 
 local Release = "Beta 7R"
